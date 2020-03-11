@@ -37,7 +37,8 @@
         "@fremtind/jkl-react-hooks": "^1.1.1",
         "@fremtind/jkl-typography-react": "^2.1.1",
         "@nrk/core-datepicker": "^3.0.7",
-        "@nrk/core-toggle": "^3.0.7"
+        "@nrk/core-toggle": "^3.0.7",
+        "@webcomponents/custom-elements": "^1.4.0"
     },
     "devDependencies": {
         "@fremtind/browserslist-config-jkl": "^0.4.14",
