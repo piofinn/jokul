@@ -28,12 +28,14 @@ interface Props {
     action?: Action;
     dark?: boolean;
     clickable?: Clickable;
+    appearFromNothing?: boolean;
 }
 
-export const Card = ({ title, children, className, media, action, dark, clickable }: Props) => {
+export const Card = ({ title, children, className, media, action, dark, clickable, appearFromNothing }: Props) => {
     const componentClassName = classNames("jkl-card", className, {
         "jkl-card--dark": dark,
         "jkl-card--clickable": clickable,
+        "jkl-card--appear-from-nothing": appearFromNothing,
     });
 
     let Button = PrimaryButton;

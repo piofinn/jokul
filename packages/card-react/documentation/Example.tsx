@@ -12,6 +12,14 @@ function handleClick() {
 
 const CardDemo = () => (
     <section className="jkl-spacing--top-3 jkl-spacing--bottom-3">
+        <Card title="Card Appear" dark appearFromNothing>
+            <p className="jkl-body">
+                Først ser vi om vi kan behandle saken din automatisk. Da får du svar samme dag. Hvis den ikke kan
+                behandles automatisk, vurderer vi saken og kontakter deg innen 8 arbeidsdager.
+            </p>
+        </Card>
+        <br></br>
+
         <Card className="test-class">
             <p className="jkl-body">Empty card</p>
         </Card>

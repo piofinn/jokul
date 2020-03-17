@@ -40,6 +40,19 @@ $card-padding-normal: $component-spacing--xl;
         background-color: $svart;
         color: $hvit;
     }
+    &--appear-from-nothing {
+        animation: appearFromNothing 1.5s ease infinite alternate;
+
+        @keyframes appearFromNothing {
+
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    }
     &--clickable:hover,
     &--clickable:focus {
         box-shadow: $drop-shadow--large;
