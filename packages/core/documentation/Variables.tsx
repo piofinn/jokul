@@ -6,6 +6,8 @@ import shadow from "!!raw-loader!../variables/_shadow.scss";
 import spacing from "!!raw-loader!../variables/_spacing.scss";
 import zIndex from "!!raw-loader!../variables/_z-index.scss";
 
+import "./variables.scss";
+
 interface SassVariable {
     name: string;
     value: string;
@@ -64,7 +66,7 @@ const findVariableValue = (variable: string, dict: string[], depth = 0): string 
 // TODO Definition tag
 
 export const Variables = () => {
-    const sassyLines: string[] = sassyFiles.spacing.split("\n").map((line: string) => line.trim());
+    const sassyLines: string[] = sassyFiles.colors.split("\n").map((line: string) => line.trim());
     const sassyDict = sassyLines.filter((line) => line.startsWith(LineType.Variable));
     const styles = [];
 
@@ -72,7 +74,6 @@ export const Variables = () => {
 
     sassyLines.forEach((val) => {
         if (val.startsWith(LineType.Variable)) {
-            console.log(val, findVariableValue(val, sassyDict));
             const v = findVariableValue(val, sassyDict);
 
             if (v && styles[lastStyle]) {
@@ -95,5 +96,23 @@ export const Variables = () => {
 
     console.log(styles);
 
-    return null;
+    return (
+        <div className="colors__list">
+            {styles[0].variables.map((variable) => {
+                return (
+                    <div className="colors__list-item" key={variable.name}>
+                        <div className="colors__list-item__title">{variable.name}</div>
+                        <div
+                            className="colors__list-item__box"
+                            style={{
+                                backgroundColor: variable.value,
+                                border: variable.value === "#fff" ? "1px solid #B8B8B8" : "none",
+                            }}
+                        />
+                        <div className="colors__list-item__meta">{variable.value}</div>
+                    </div>
+                );
+            })}
+        </div>
+    );
 };

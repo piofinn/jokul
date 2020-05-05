@@ -1,0 +1,29 @@
+@import "../variables/all";
+@import "../mixins/all";
+
+.colors__list {
+    display: flex;
+    justify-content: space-around;
+
+    &-item {
+        & > * {
+            padding-bottom: $layout-spacing--small;
+            padding-top: $layout-spacing--medium;
+        }
+
+        &__title {
+            @include jkl-text-style("desktop/body");
+        }
+
+        &__box {
+            width: 78px;
+            height: 78px;
+            transform: rotate(45deg);
+            box-sizing: border-box;
+        }
+
+        &__meta {
+            @include jkl-text-style("desktop/small");
+        }
+    }
+}
