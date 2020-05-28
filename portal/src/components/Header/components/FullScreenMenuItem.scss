@@ -11,7 +11,17 @@
         position: relative;
         @include reset-outline;
         @include jkl-text-style("desktop/title-small");
-        line-height: rem(72px);
+
+        /// Calculate font size and line height from screen size
+        /// Sizes correspond to 48px/72px at 1440x900 resolution
+        /// How it works: calculate the size relative to both screen width
+        /// and screen height, and choose the smallest of the two numbers.
+        /// Example calculation for line height:
+        /// 72px/1440px = 0.05 -> 5vw (5% of screen width)
+        /// 72px/900px = 0.08 -> 8vh (8% of screen height)
+        line-height: min(5vw, 8vh);
+        font-size: min(3.3333333vw, 5.3333333vh);
+
         text-decoration: none;
         color: $svart;
         background-color: transparent;
