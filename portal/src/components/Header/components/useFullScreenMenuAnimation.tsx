@@ -20,7 +20,7 @@ export const useFullScreenMenuAnimaiton = ({ isOpen }: Props) => {
     const initial = {
         opacity: 1,
         clipPath: prefersReducedMotion ? "" : "inset(0 -3ch 100% 0)",
-        transition: { duration: 0.25, delay: 0.1 },
+        transition: { duration: 0.15 },
         y: prefersReducedMotion ? 0 : "100%",
     };
 
@@ -30,7 +30,7 @@ export const useFullScreenMenuAnimaiton = ({ isOpen }: Props) => {
             transition: { duration: 0.35, delay: prefersReducedMotion ? 0 : 0.03 * idx },
             y: 0,
         }),
-        [],
+        [prefersReducedMotion],
     );
 
     // Initial animation on menu open/close
