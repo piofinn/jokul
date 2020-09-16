@@ -28,7 +28,7 @@ $select-error-color--inverted: $feil--darkbg;
 
 :root,
 [data-theme="light"] {
-    --select-border-color: #{$select-border-color};
+    --select-border-color: var(--brand-color);
     --select-text-color: #{$select-text-color};
     --select-background-color: #{$select-background-color};
     --select-open-background-color: #{$select-open-background-color};
@@ -117,15 +117,15 @@ $select-error-color--inverted: $feil--darkbg;
         &:hover,
         &:focus {
             border-color: $select-focus-color;
-            border-color: var(--select-focus-color);
+            border-color: var(--focus-color);
             color: $select-focus-color;
-            color: var(--select-focus-color);
+            color: var(--focus-color);
             box-shadow: 0 0 0 rem(1px) $select-focus-color;
-            box-shadow: 0 0 0 rem(1px) var(--select-focus-color);
+            box-shadow: 0 0 0 rem(1px) var(--focus-color);
 
             & ~ .jkl-select__arrow {
                 color: $select-focus-color;
-                color: var(--select-focus-color);
+                color: var(--focus-color);
             }
         }
 
@@ -158,7 +158,7 @@ $select-error-color--inverted: $feil--darkbg;
         background-color: $select-open-background-color;
         background-color: var(--select-open-background-color);
         border: rem(2px) solid $select-focus-color;
-        border: rem(2px) solid var(--select-focus-color);
+        border: rem(2px) solid var(--focus-color);
         border-top: none;
         border-radius: 0 0 rem(3px) rem(3px);
         box-sizing: border-box;
@@ -198,7 +198,7 @@ $select-error-color--inverted: $feil--darkbg;
 
         &:focus {
             color: $select-focus-color;
-            color: var(--select-focus-color);
+            color: var(--focus-color);
 
             &::before {
                 content: "→ ";
@@ -207,14 +207,14 @@ $select-error-color--inverted: $feil--darkbg;
 
         &:hover {
             color: $select-focus-color;
-            color: var(--select-focus-color);
+            color: var(--focus-color);
         }
 
         &[aria-selected="true"]:not(:focus) {
             &::after {
                 $mask-image-url: url('data:image/svg+xml; utf8, <svg width="17" height="13" viewBox="0 0 17 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 8.52632L4.6 12L16 1" stroke="black"/></svg>');
                 background-color: $select-focus-color;
-                background-color: var(--select-focus-color);
+                background-color: var(--focus-color);
                 content: "";
                 /* autoprefixer with Browserlist="Chrome >= 70" will not generate 
                  * a prefix for this even if Chrome 70 doesn't support mask-image
@@ -244,11 +244,11 @@ $select-error-color--inverted: $feil--darkbg;
             border-bottom-left-radius: 0;
             border-bottom-right-radius: 0;
             border-color: $select-focus-color;
-            border-color: var(--select-focus-color);
+            border-color: var(--focus-color);
             background-color: $select-open-background-color;
             background-color: var(--select-open-background-color);
             box-shadow: 0 0 0 rem(1px) $select-focus-color;
-            box-shadow: 0 0 0 rem(1px) var(--select-focus-color);
+            box-shadow: 0 0 0 rem(1px) var(--focus-color);
 
             &:hover ~ .jkl-select__arrow {
                 transform: translateY(calc(-50% + #{rem(-3px)}));
@@ -281,14 +281,14 @@ $select-error-color--inverted: $feil--darkbg;
             .jkl-select__search-input,
             .jkl-select__button {
                 border-color: $select-focus-color;
-                border-color: var(--select-focus-color);
+                border-color: var(--focus-color);
                 box-shadow: 0 0 0 rem(1px) $select-focus-color;
-                box-shadow: 0 0 0 rem(1px) var(--select-focus-color);
+                box-shadow: 0 0 0 rem(1px) var(--focus-color);
                 &:hover,
                 &:focus {
                     & ~ .jkl-select__arrow {
                         color: $select-focus-color;
-                        color: var(--select-focus-color);
+                        color: var(--focus-color);
                     }
                 }
             }

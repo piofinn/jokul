@@ -7,7 +7,7 @@ $datepicker-focus-color--inverted: $info--darkbg;
 
 :root,
 [data-theme="light"] {
-    --datepicker-focus-color: #{$datepicker-focus-color};
+    --datepicker-focus-color: var(--focus-color);
 }
 [data-theme="dark"] {
     --datepicker-focus-color: #{$datepicker-focus-color--inverted};
@@ -37,12 +37,11 @@ $datepicker-focus-color--inverted: $info--darkbg;
     &--open {
         .jkl-datepicker__input {
             box-shadow: inset 0 0 0 rem(1px) $datepicker-focus-color, 0 0 0 0 $datepicker-focus-color;
-            box-shadow: inset 0 0 0 rem(1px) var(--datepicker-focus-color), 0 0 0 0 var(--datepicker-focus-color);
+            box-shadow: inset 0 0 0 rem(1px) var(--focus-color), 0 0 0 0 var(--focus-color);
             &:hover,
             &:focus {
                 box-shadow: inset 0 0 0 rem(1px) $datepicker-focus-color, 0 0 0 rem(1px) $datepicker-focus-color;
-                box-shadow: inset 0 0 0 rem(1px) var(--datepicker-focus-color),
-                    0 0 0 rem(1px) var(--datepicker-focus-color);
+                box-shadow: inset 0 0 0 rem(1px) var(--focus-color), 0 0 0 rem(1px) var(--focus-color);
             }
         }
     }
@@ -91,11 +90,11 @@ $calendar-focus-color--inverted: $info--darkbg;
 [data-theme="light"] {
     --calendar-text-color: #{$calendar-text-color};
     --calendar-background-color: #{$calendar-background-color};
-    --calendar-border-color: #{$calendar-border-color};
+    --calendar-border-color: var(--focus-color);
     --calendar-adjacent-month-color: #{$calendar-adjacent-month-color};
     --calendar-disabled-day-color: #{$calendar-disabled-day-color};
     --calendar-active-day-color: #{$calendar-active-day-color};
-    --calendar-focus-color: #{$calendar-focus-color};
+    --calendar-focus-color: var(--focus-color);
 }
 
 [data-theme="dark"] {
@@ -217,17 +216,17 @@ $calendar-focus-color--inverted: $info--darkbg;
         &:hover,
         &:focus {
             color: $calendar-focus-color;
-            color: var(--calendar-focus-color);
+            color: var(--focus-color);
         }
 
         html:not([data-mousenavigation]) &:focus {
             border-color: $calendar-focus-color;
-            border-color: var(--calendar-focus-color);
+            border-color: var(--focus-color);
             border-width: rem(4px);
 
             &::before {
                 box-shadow: inset 0 0 0 rem(2px) $calendar-focus-color;
-                box-shadow: inset 0 0 0 rem(2px) var(--calendar-focus-color);
+                box-shadow: inset 0 0 0 rem(2px) var(--focus-color);
             }
         }
 
@@ -339,7 +338,7 @@ $calendar-focus-color--inverted: $info--darkbg;
         &:hover:not(:disabled),
         &[autofocus] {
             background-color: $calendar-focus-color;
-            background-color: var(--calendar-focus-color);
+            background-color: var(--focus-color);
             color: $calendar-active-day-color;
             color: var(--calendar-active-day-color);
             cursor: pointer;
@@ -352,7 +351,7 @@ $calendar-focus-color--inverted: $info--darkbg;
 
         &:focus::before {
             box-shadow: 0 0 0 rem(2px) $calendar-focus-color;
-            box-shadow: 0 0 0 rem(2px) var(--calendar-focus-color);
+            box-shadow: 0 0 0 rem(2px) var(--focus-color);
         }
     }
 

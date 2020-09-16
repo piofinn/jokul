@@ -1,0 +1,148 @@
+@import "~@fremtind/jkl-core/variables/_all.scss";
+@import "~@fremtind/jkl-core/mixins/_all.scss";
+@import "~@fremtind/jkl-core/_functions.scss";
+
+.jkl-token-example {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    &__fremtind-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: $svart;
+
+        height: rem(64px);
+        padding: 0 $component-spacing--large;
+
+        @include from-medium-device {
+            height: rem(96px);
+            padding: 0 $layout-spacing--medium;
+        }
+    }
+
+    &__brand-header {
+        height: rem(96px);
+    }
+
+    &__settings {
+        display: flex;
+        height: 100%;
+        align-items: center;
+
+        .jkl-select .jkl-label {
+            @include screenreader-only;
+        }
+    }
+
+    &__headline,
+    &__content {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0 $component-spacing--large;
+
+        @include from-medium-device {
+            padding: 0 $layout-spacing--medium;
+        }
+
+        @include from-large-device {
+            padding: 0 20%;
+        }
+    }
+
+    &__headline {
+        padding-top: $layout-spacing--small;
+        padding-bottom: $layout-spacing--medium;
+        //background-color: var(--accent-color);
+
+        @include from-medium-device {
+            padding-top: $layout-spacing--medium;
+            padding-bottom: $layout-spacing--large;
+        }
+    }
+
+    &__content {
+        padding-top: $layout-spacing--medium;
+        padding-bottom: $layout-spacing--large;
+        background-color: var(--accent-color);
+
+        @include from-medium-device {
+            padding-top: $layout-spacing--large;
+            padding-bottom: $layout-spacing--xxl;
+        }
+    }
+
+    &__footer {
+        height: rem(164px);
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background-color: var(--brand-color);
+        color: white;
+        @include jkl-text-style("desktop/body");
+    }
+}
+
+.jkl-token-example-main-menu {
+    display: inline-flex;
+    align-items: center;
+    height: 100%;
+
+    &__list {
+        list-style-type: none;
+        display: block;
+        margin: 0;
+        padding: 0;
+        height: 100%;
+    }
+
+    &__item {
+        @include jkl-text-style("desktop/body");
+        display: inline-block;
+        height: 100%;
+        color: inherit;
+        &:not(:last-child) {
+            margin-right: $component-spacing--xxl;
+        }
+    }
+
+    &__link {
+        @include reset-outline;
+        background-color: transparent;
+        color: inherit;
+        cursor: pointer;
+        padding: 0;
+        height: 100%;
+        box-shadow: inset 0 0 0 0 transparent;
+        display: inline-flex;
+        align-items: center;
+        text-decoration: none;
+
+        @include motion("standard");
+        transition-property: box-shadow;
+
+        &:hover,
+        html:not([data-mousenavigation]) &:focus {
+            color: var(--focus-color);
+        }
+
+        &:hover,
+        html:not([data-mousenavigation]) &:focus,
+        &--active {
+            box-shadow: inset 0 rem(-4px) 0 0 currentColor;
+        }
+
+        &--active {
+            @include no-grow-bold;
+        }
+
+        *[data-theme="dark"] & {
+            &--active {
+                color: #00faff;
+            }
+        }
+    }
+}

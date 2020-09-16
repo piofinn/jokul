@@ -46,12 +46,12 @@ $hamburger-focus-color--inverted: $focus-color--darkbg;
 
     &:hover {
         color: $hamburger-focus-color;
-        color: var(--hamburger-focus-color);
+        color: var(--focus-color);
     }
 
     html:not([data-mousenavigation]) &:focus {
         box-shadow: 0 0 0 rem(2px) $hamburger-focus-color;
-        box-shadow: 0 0 0 rem(2px) var(--hamburger-focus-color);
+        box-shadow: 0 0 0 rem(2px) var(--focus-color);
     }
 
     &__inner {

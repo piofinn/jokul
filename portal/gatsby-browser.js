@@ -32,6 +32,8 @@ import { initTabListener } from "@fremtind/jkl-core";
 
 import "@fremtind/jkl-portal-components/component-example.scss";
 
+import "@fremtind/jkl-core/dist-dnb.css";
+
 import "./src/components/Typography/typography.scss";
 import { ThemeContextProvider } from "./src/contexts/themeContext";
 import { FSMenuContextProvider } from "./src/contexts/fullscreenMenuContext";

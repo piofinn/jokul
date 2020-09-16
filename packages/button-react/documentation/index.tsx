@@ -4,6 +4,7 @@ import ReactDOM from "react-dom";
 // Import core styles, webfonts and tab listener (same for all components):
 import { initTabListener } from "@fremtind/jkl-core";
 import "@fremtind/jkl-core/core.scss";
+import "@fremtind/jkl-core/dist-dnb.scss";
 import "../../webfonts/documentation/internal.scss";
 
 // Imports required for showing example (same for all components):

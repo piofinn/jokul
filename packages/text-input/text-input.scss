@@ -31,7 +31,7 @@ $text-input-error-color--inverted: $feil--darkbg;
 
 :root,
 [data-theme="light"] {
-    --text-input-border-color: #{$text-input-border-color};
+    --text-input-border-color: var(--brand-color);
     --text-input-text-color: #{$text-input-text-color};
     --text-input-placeholder-color: #{$text-input-placeholder-color};
     --text-input-background-color: #{$text-input-background-color};
@@ -98,9 +98,9 @@ $text-input-error-color--inverted: $feil--darkbg;
         &:hover,
         &:focus {
             box-shadow: inset 0 0 0 rem(1px) $text-input-focus-color, 0 0 0 rem(1px) $text-input-focus-color;
-            box-shadow: inset 0 0 0 rem(1px) var(--text-input-focus-color), 0 0 0 rem(1px) var(--text-input-focus-color);
+            box-shadow: inset 0 0 0 rem(1px) var(--focus-color), 0 0 0 rem(1px) var(--focus-color);
             border-color: $text-input-focus-color;
-            border-color: var(--text-input-focus-color);
+            border-color: var(--focus-color);
         }
 
         /*  Invalid states */
@@ -144,7 +144,7 @@ $text-input-error-color--inverted: $feil--darkbg;
         &:focus,
         &:hover {
             color: $text-input-focus-color;
-            color: var(--text-input-focus-color);
+            color: var(--focus-color);
         }
     }
 

@@ -14,6 +14,10 @@
     font-family: "Fremtind Grotesk", Calibri, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+
+    --brand-color: var(--dist-brand-color, #{$svart});
+    --focus-color: var(--dist-focus-color, #{$info});
+    --accent-color: var(--dist-accent-color, #{$varde-10});
 }
 
 @media screen and (prefers-reduced-motion: reduce) {

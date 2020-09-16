@@ -20,12 +20,12 @@ $focus-ring-width: rem(2px);
 $animation-timing: 100ms cubic-bezier(0.6, 0.2, 0.35, 1);
 $hover-elevation-distance: -0.25rem;
 
-$button-border-color: $svart;
-$button-text-color: $svart;
+$button-border-color: var(--brand-color);
+$button-text-color: var(--brand-color);
 $button-background-color: $hvit;
-$button-focus-color: $info;
+$button-focus-color: var(--focus-color);
 $button-primary-text-color: $hvit;
-$button-primary-background-color: $svart;
+$button-primary-background-color: var(--brand-color);
 
 $button-border-color--inverted: $hvit;
 $button-text-color--inverted: $hvit;
@@ -36,8 +36,8 @@ $button-primary-background-color--inverted: $hvit;
 
 :root,
 [data-theme="light"] {
-    --button-border-color: #{$button-border-color};
-    --button-text-color: #{$button-text-color};
+    --button-border-color: var(--brand-color);
+    --button-text-color: var(--brand-color);
     --button-background-color: #{$button-background-color};
     --button-focus-color: #{$button-focus-color};
     --button-primary-text-color: #{$button-primary-text-color};
@@ -109,7 +109,7 @@ $button-primary-background-color--inverted: $hvit;
         html:not([data-mousenavigation]) &:focus {
             &:after {
                 box-shadow: 0 0 0 $focus-ring-width $button-focus-color;
-                box-shadow: 0 0 0 $focus-ring-width var(--button-focus-color);
+                box-shadow: 0 0 0 $focus-ring-width var(--focus-color);
             }
         }
     }
@@ -123,9 +123,9 @@ $button-primary-background-color--inverted: $hvit;
         &:hover,
         html:not([data-mousenavigation]) &:focus {
             background-color: $button-focus-color;
-            background-color: var(--button-focus-color);
+            background-color: var(--focus-color);
             border-color: $button-focus-color;
-            border-color: var(--button-focus-color);
+            border-color: var(--focus-color);
         }
     }
 
@@ -138,9 +138,9 @@ $button-primary-background-color--inverted: $hvit;
         &:hover,
         html:not([data-mousenavigation]) &:focus {
             color: $button-focus-color;
-            color: var(--button-focus-color);
+            color: var(--focus-color);
             border-color: $button-focus-color;
-            border-color: var(--button-focus-color);
+            border-color: var(--focus-color);
         }
     }
 
@@ -158,10 +158,10 @@ $button-primary-background-color--inverted: $hvit;
         &:hover,
         html:not([data-mousenavigation]) &:focus {
             border-bottom-color: $button-focus-color;
-            border-bottom-color: var(--button-focus-color);
+            border-bottom-color: var(--focus-color);
             border-bottom-width: rem(2px);
             color: $button-focus-color;
-            color: var(--button-focus-color);
+            color: var(--focus-color);
         }
     }
 
